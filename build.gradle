@@ -1,26 +1,24 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.gradle.userdev' version '7.0.109'
+}
+
 java {
-    toolchain.languageVersion = JavaLanguageVersion.of(17)
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 
-userdev {
-    minecraftVersion = "1.21.1"
-    neoforgeVersion = "20.1.67-beta"
-
-    runs {
-        client
-        server
-        data
-    }
-}
-
-group = 'emanon.collars'
+group = 'com.example'
 version = '1.0.0'
 
-repositories {
-    mavenCentral()
-    maven { url = "https://maven.neoforged.net/releases" }
+base {
+    archivesName = 'wearablecollars'
 }
 
-dependencies {
-    implementation "net.neoforged:neoforge:20.1.67-beta"
+minecraft {
+    version = "20.1.79-beta"
+    runs {
+        client {
+            workingDirectory project.file("run")
+        }
+    }
 }
