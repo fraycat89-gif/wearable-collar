@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.gradle.userdev' version '7.0.109'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+base {
+    archivesName = 'wearablecollars'
+}
+
+minecraft {
+    version = "20.1.79-beta"
+    runs {
+        client {
+            workingDirectory = file("run")
+        }
+    }
+}

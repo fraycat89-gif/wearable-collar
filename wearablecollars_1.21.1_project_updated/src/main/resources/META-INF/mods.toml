@@ -1,0 +1,10 @@
+modLoader="neoforge"
+loaderVersion="[20,)"
+license="MIT"
+[[mods]]
+modId="wearablecollars"
+version="1.0.0"
+displayName="Wearable Collars"
+description='''
+Ported and updated for Minecraft 1.21.1 using NeoForge.
+'''
